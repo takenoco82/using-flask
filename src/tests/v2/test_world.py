@@ -1,6 +1,6 @@
 import unittest
 
-import app
+import run
 
 
 class TestWorld(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestWorld(unittest.TestCase):
         pass
 
     def setUp(self):
-        self.app = app.app.test_client()
+        self.app = run.app.test_client()
 
     def tearDown(self):
         pass

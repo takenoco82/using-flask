@@ -2,7 +2,7 @@ import unittest
 
 from parameterized import param, parameterized
 
-import app
+import run
 
 
 class TestHello(unittest.TestCase):
@@ -15,7 +15,7 @@ class TestHello(unittest.TestCase):
         pass
 
     def setUp(self):
-        self.app = app.app.test_client()
+        self.app = run.app.test_client()
 
     def tearDown(self):
         pass
