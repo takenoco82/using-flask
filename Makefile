@@ -1,5 +1,9 @@
 run:
-	python ./src/run.py
+	docker-compose up -d --build --remove-orphans
+
+stop:
+	docker-compose stop
+	docker-compose rm -f
 
 test:
-	nosetests -v --nologcapture ./src/tests
+	docker-compose run --rm api nosetests -v --nologcapture /usr/src/app/tests
