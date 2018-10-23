@@ -6,9 +6,17 @@ WORKDIR /usr/src/app
 ENV PYTHONPATH=/usr/src/app:$PYTHONPATH
 
 # ライブラリをインストール
-COPY ./requirements.txt ./
-RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+COPY ./requirements.txt ./requirements.lock ./requirements_test.txt ./
+RUN pip install --no-cache-dir -r ./requirements.lock && \
+    pip install --no-cache-dir -r ./requirements.txt
 
+# ソースをコピー
 COPY src/ ./
+
+# テスト時のみ、テスト用のライブラリをインストール
+ARG TEST
+RUN if [ -n "$TEST" ]; then \
+    pip install --no-cache-dir -r /usr/src/app/requirements_test.txt; \
+fi
 
 CMD [ "python", "./run.py" ]
