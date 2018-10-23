@@ -1,6 +1,6 @@
 SERVICE_API=api
 
-run:
+run: stop
 	docker-compose up -d --build --remove-orphans
 
 lock:
