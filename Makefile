@@ -1,7 +1,6 @@
 SERVICE_API=api
 
 run:
-	docker-compose build ${SERVICE_API}
 	docker-compose up -d --build --remove-orphans
 
 lock:
