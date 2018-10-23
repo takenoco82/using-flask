@@ -23,7 +23,7 @@
             "problemMatcher": [],
             "options": {
                 "env": {
-                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/app"
+                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src"
                 }
             }
         },
@@ -54,7 +54,7 @@
             },
             "options": {
                 "env": {
-                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/app"
+                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src"
                 }
             }
         },
@@ -85,7 +85,7 @@
             },
             "options": {
                 "env": {
-                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/app"
+                    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src"
                 }
             }
         },
