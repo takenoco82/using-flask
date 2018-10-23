@@ -3,7 +3,7 @@ version: '3'
 services:
   api:
     build: .
-    image: using-flask/api:1.0
+    image: ${IMAGE_API}:${TAG_API}
     restart: always
     ports:
       - "8080:8080"
